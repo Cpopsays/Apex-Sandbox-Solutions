@@ -1,0 +1,15 @@
+//Implement a function diff that calculates the absolute difference between two integers.
+
+//cleanest solution:
+public Integer diff(Integer a, Integer b) {
+    return Math.abs(a-b);
+}
+
+//this also works:
+public Integer diff(Integer a, Integer b) {
+    if (a>b){ 
+        return (a-b);
+    }else {
+        return (b-a);
+    }
+}
