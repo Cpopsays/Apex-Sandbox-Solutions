@@ -1,0 +1,17 @@
+/*Given two strings firstName and lastName, return the name in the format LastName, FirstName. 
+In case one of the names is null or empty, return only the non-empty part of the name. 
+If both are null or empty, return an empty string.
+formatName('Jane', 'Doe') = 'Doe, Jane'
+formatName('Jane', '') = 'Jane'*/
+
+public String formatName(String firstName, String lastName) {
+    //when first name and last name are blank, return nothing
+    if (String.isBlank(firstName) && String.isBlank(lastName)) return '';
+    //when first name is blank, return last name only
+    else if (String.isBlank(firstName)) return lastName;
+    //when last name is blank, return first name only
+    else if (String.isBlank(lastName)) return firstName;
+    //when last name nad first name have value return in this format: lastname, firstname
+    else return lastName+ ', ' +firstName; 
+}
+
